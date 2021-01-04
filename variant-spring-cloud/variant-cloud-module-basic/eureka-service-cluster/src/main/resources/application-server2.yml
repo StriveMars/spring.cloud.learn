@@ -1,0 +1,28 @@
+server:
+  port: 8082
+eureka:
+  instance:
+    hostname: eureka-server2
+    #默认：90s
+    #标识eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间,
+    #太大：可能将流量转发过去的时候，该instance已经不存活了
+    #太小：instance则很可能因为临时的网络抖动而被摘除掉
+    lease-expiration-duration-in-seconds: 45
+    #默认：30s
+    #表示eureka client发送心跳给server端的频率
+    lease-renewal-interval-in-seconds: 15
+  client:
+    #要不要去注册中心获取其他服务的地址
+    fetch-registry: false
+    #自己就是注册中心，不用注册自己
+    register-with-eureka: false
+    #服务地址
+    service-url:
+      # 多个地址使用","分割
+      defaultZone:  http://eureka-server1:8081/eureka/
+  server:
+    # 指定每分钟需要收到的续约次数的阈值，默认值就是：0.85
+    renewal-percent-threshold: 0.6
+    #enable-self-preservation: false
+    #续期时间，即扫描失效服务的间隔时间（缺省为60*1000ms）
+    eviction-interval-timer-in-ms: 30000
