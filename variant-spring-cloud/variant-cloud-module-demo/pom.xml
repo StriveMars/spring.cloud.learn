@@ -18,6 +18,7 @@
 
         <module>demo-service</module>
         <module>demo-ribbon</module>
+        <module>demo-feign</module>
     </modules>
 
 
