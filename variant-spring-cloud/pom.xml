@@ -4,15 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.com.netfliz.springcloud</groupId>
+    <groupId>cn.com.netflix.springcloud</groupId>
     <artifactId>variant-spring-cloud</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>variant-cloud-framework</module>
-        <module>variant-cloud-module-basic</module>
-    </modules>
+
 
     <name>Spring Cloud</name>
 
@@ -50,6 +47,9 @@
         <jjwt.version>0.9.1</jjwt.version>
         <!--fastjson版本-->
         <fastjson.version>1.2.73</fastjson.version>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 
@@ -75,14 +75,14 @@
             </dependency>
 
 
-
-
-
-
-
-
         </dependencies>
     </dependencyManagement>
 
+
+    <modules>
+        <module>variant-cloud-framework</module>
+        <module>variant-cloud-module-basic</module>
+        <module>variant-cloud-module-demo</module>
+    </modules>
 
 </project>

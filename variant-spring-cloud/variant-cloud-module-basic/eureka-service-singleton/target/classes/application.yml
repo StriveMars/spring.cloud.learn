@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    #服务名称
+    name: eureka-service-singleton
+
+eureka:
+  instance:
+    #IP地址
+    ip-address: 127.0.0.1
+    #启用IP地址方式实例化
+    prefer-ip-address: true
+    #默认：90s
+    #表示eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间,
+    #太大：可能将流量转发过去的时候，该instance已经不存活了
+    #太小：instance则很可能因为临时的网络抖动而被摘除掉
+    lease-expiration-duration-in-seconds: 45
+    #默认：30s
+    #表示eureka client发送心跳给server端的频率
+    lease-renewal-interval-in-seconds: 15
+  client:
+    #要不要去注册中心获取其他服务的地址
+    fetch-registry: false
+    #自己就是注册中心，不用注册自己
+    register-with-eureka: false
+    #服务地址
+    service-url:
+      defaultZone:  http://${eureka.instance.ip-address}:${server.port}/eureka/
+  server:
+    # 指定每分钟需要收到的续约次数的阈值，默认值就是：0.85
+    renewal-percent-threshold: 0.8
+    #enable-self-preservation: false
+    #续期时间，即扫描失效服务的间隔时间（缺省为60*1000ms）
+    eviction-interval-timer-in-ms: 30000
