@@ -15,10 +15,9 @@
     <name>Spring Cloud Module Demo</name>
 
     <modules>
-
-        <module>demo-service</module>
-        <module>demo-ribbon</module>
         <module>demo-feign</module>
+        <module>demo-ribbon</module>
+        <module>demo-service</module>
     </modules>
 
 
