@@ -1,6 +1,5 @@
 package cn.com.cloud.variant.demo.client;
 
-import cn.com.cloud.variant.demo.hystrix.DemoFeginHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -8,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @author ：macx7@chinatelecom.cn
  * @since ：2021/1/5
  */
-@FeignClient(value = "module-demo-service",fallback = DemoFeginHystrix.class)
+@FeignClient(value = "module-demo-service")
 public interface DemoFeignService {
 
     /**

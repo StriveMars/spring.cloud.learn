@@ -83,6 +83,7 @@
         <module>variant-cloud-framework</module>
         <module>variant-cloud-module-basic</module>
         <module>variant-cloud-module-demo</module>
+        <module>variant-cloud-module-demo/demo-feign</module>
     </modules>
 
 </project>
