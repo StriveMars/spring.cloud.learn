@@ -1,4 +1,4 @@
-package cn.com.cloud.variant.demo.web;
+package cn.com.cloud.variant.demo.controller;
 
 import cn.com.cloud.variant.demo.client.DemoRibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
