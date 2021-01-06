@@ -23,17 +23,10 @@ public class DemoRibbonApplication {
         SpringApplication.run(DemoRibbonApplication.class, args);
     }
 
-
     @Bean
-    //提供负载均衡的功能
     @LoadBalanced
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplate();
-    }
-
-    @Bean
-    public IRule ribbonRule() {
-        return new RoundRobinRule();//这里配置策略，和配置文件对应
     }
 
 }

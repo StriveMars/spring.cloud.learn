@@ -1,11 +1,14 @@
 server:
-  port: 10010
+  port: 8083
+  tomcat:
+    uri-encoding: UTF-8
 
 spring:
   application:
-    name: module-demo-ribbon
+    name: module-demo-service
 
 eureka:
   client:
     service-url:
       defaultZone: http://eureka-server1:10001/eureka/,http://eureka-server2:10002/eureka/
+
