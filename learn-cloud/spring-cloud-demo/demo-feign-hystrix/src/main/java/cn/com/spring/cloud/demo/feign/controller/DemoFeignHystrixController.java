@@ -1,6 +1,6 @@
 package cn.com.spring.cloud.demo.feign.controller;
 
-import cn.com.spring.cloud.demo.feign.client.DemoFeignClient;
+import cn.com.spring.cloud.demo.feign.client.DemoFeignHystrixClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
  *  @since  ：2021/1/8
  */
 @RestController
-public class DemoFeignController {
+public class DemoFeignHystrixController {
 
     @Autowired
-    DemoFeignClient client;
+    DemoFeignHystrixClient client;
 
     @PostMapping("/web/feign")
     public String ribbonTest(String str) {
