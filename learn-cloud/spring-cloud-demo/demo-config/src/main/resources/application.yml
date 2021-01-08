@@ -1,0 +1,16 @@
+server:
+  port: 10151
+
+spring:
+  application:
+    name: demo-config
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/strivemars/spring.cloud.config.git # 需要拉取配置的Git仓库地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:10101/eureka/,http://eureka-server2:10102/eureka/ # eureka地址

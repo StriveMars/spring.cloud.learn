@@ -23,5 +23,7 @@
         <module>demo-feign-hystrix</module>
         <module>demo-zuul</module>
         <module>demo-gateway</module>
+        <module>demo-config</module>
+        <module>demo-config-service</module>
     </modules>
 </project>

@@ -1,0 +1,19 @@
+server:
+  port: 10204
+
+spring:
+  application:
+    name: demo-config-service
+  cloud:
+    config:
+      name: testconfig  # 配置文件的名称
+      profile: dev      # 环境
+      label: master     # 分支
+      discovery:
+        enabled: true   # 通过注册中心寻找ConfigServer
+        service-id: demo-config # ConfigServer的服务id
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:10101/eureka/,http://eureka-server2:10102/eureka/
