@@ -21,7 +21,8 @@ public class DemoRibbonClient {
 
     @HystrixCommand(fallbackMethod = "errorMethod")
     public String testStr(String str) {
-        return restTemplate.postForObject(BASIC_URL + "/demo/service/str", str, String.class);
+        String string = restTemplate.postForObject(BASIC_URL + "/demo/service/str", str, String.class);
+        return "Ribbon Client ：" + string;
     }
 
     public String errorMethod(String str){

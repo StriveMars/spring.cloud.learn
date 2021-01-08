@@ -20,7 +20,8 @@ public class DemoFeignHystrixController {
     @PostMapping("/web/feign")
     public String ribbonTest(String str) {
         System.out.println("服消费者获取到前端参数为：" + str);
-        return client.testStr(str);
+        String string = client.testStr(str);
+        return "Feign Client：" + string;
     }
 
 }

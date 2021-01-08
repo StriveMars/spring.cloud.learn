@@ -21,5 +21,6 @@
         <module>demo-ribbon-hystrix</module>
         <module>demo-feign</module>
         <module>demo-feign-hystrix</module>
+        <module>demo-zuul</module>
     </modules>
 </project>
