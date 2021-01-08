@@ -22,5 +22,6 @@
         <module>demo-feign</module>
         <module>demo-feign-hystrix</module>
         <module>demo-zuul</module>
+        <module>demo-gateway</module>
     </modules>
 </project>

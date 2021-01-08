@@ -13,3 +13,12 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+hystrix:
+  command:
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 2000
+      circuitBreaker:
+        errorThresholdPercentage: 50 # 触发熔断错误比例阈值，默认值50%
+        sleepWindowInMilliseconds: 20000 # 熔断后休眠时长，默认值5秒
+        requestVolumeThreshold: 10 # 触发熔断的最小请求次数，默认20
